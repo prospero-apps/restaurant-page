@@ -3,6 +3,7 @@ class MenuItem {
         this.name = name;
         this.description = description;
         this.price = price;
+        this.imagePath = imagePath;
     }
 
     showName() {
@@ -17,10 +18,9 @@ class MenuItem {
         return '$' + this.price;
     }
 
-    showImage() {
-        const image = new Image()
-        image.scr = imagePath;
-    }       
+    setImageSource() {
+        return this.imagePath;
+    }  
 }
 
 export default MenuItem;

@@ -3,6 +3,10 @@
     src: url('./fonts/MouseMemoirs-Regular.ttf') format('ttf');    
 }
 
+:root {
+    --transparent-black: rgba(.5, .5, .5, .5);
+}
+
 body {
     background: url('./images/restaurant.jpg');
     font-family: 'MouseMemoirs';
@@ -49,8 +53,9 @@ body {
     color: yellow;
 }
 
+/* HOME */
 .rect {
-    background-color: rgba(.5, .5, .5, .5);
+    background-color: var(--transparent-black);
     grid-row: 2 / 3;
     min-width: 400px;
     width: 100%;
@@ -84,6 +89,44 @@ body {
     margin-top: 4rem;
 }
 
-img {
-    width: 200px;
+/* MENU */
+.menu-element {
+    background-color: var(--transparent-black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;       
+    border: 4px solid black; 
+    border-radius: 10px;
+    color: white;
+    padding: 1em;
+    gap: 1em;
+    align-items: center;
 }
+
+.menu-image {
+    width: 400px;
+    grid-row: 1 / 3;
+    border: 2px solid white;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7em;
+    border-bottom: 2px dotted white;
+}
+
+.menu-item-name {
+    color: bisque;
+}
+
+.menu-item-price {
+ color: lightgreen;
+}
+
+.menu-item-description {
+    font-size: 1.3em;
+}
+
+/* CONTACT */
+
