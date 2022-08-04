@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'MouseMemoirs';
+    src: url('./fonts/MouseMemoirs-Regular.ttf') format('ttf');    
+}
+
+body {
+    background: url('./images/restaurant.jpg');
+    font-family: 'MouseMemoirs';
+    display: grid;
+    justify-items: center;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 75px 1fr;
+    place-items: center;
+    height: 100vh;
+    width: 80%;
+}
+
+.header {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name {
+    font-size: 3em;
+    color: white;
+}
+
+.tabs {
+    display: flex;
+    gap: 3em;
+}
+
+.tab {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: white;
+}
+
+.tab:hover {
+    color: yellow;
+}
+
+.rect {
+    background-color: rgba(.5, .5, .5, .5);
+    grid-row: 2 / 3;
+    min-width: 400px;
+    width: 100%;
+    min-height: 50vh;
+}
+
+img {
+    width: 200px;
+}
