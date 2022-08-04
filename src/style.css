@@ -55,6 +55,33 @@ body {
     min-width: 400px;
     width: 100%;
     min-height: 50vh;
+    font-size: 2em;
+    color: white;
+    box-sizing: border-box;
+    padding: .2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.rect * {
+    margin: .2em;
+}
+
+#line1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: bisque;
+}
+
+#line2,
+#line3 {
+    font-size: 2rem;
+}
+
+#line4 {
+    font-size: 1.3rem;
+    margin-top: 4rem;
 }
 
 img {
