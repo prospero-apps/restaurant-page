@@ -1,6 +1,17 @@
 import './style.css';
+import Restaurant from './restaurant';
+import MenuItem from './menuitem';
+
 // import RestaurantImage from './images/restaurant.jpg';
 //import FishImage from './images/fish.jpg';
+
+const restaurant = new Restaurant(
+    'Food Place',
+    'A decent little downtown restaurant.\nEat, drink and enjoy.',
+    '242 Park Road\n Glutton City, 455778',
+    'Mon-Fri: 4pm-10pm\nSat-Sun: 4pm-11pm',
+    '(444)-222 7777'
+)
 
 const content = document.querySelector('#content');
 
@@ -18,7 +29,7 @@ const header = add('div', 'header', 'main-header', content);
 
 // add restaurant name
 const restaurantName = add('p', 'name', 'main-name', header);
-restaurantName.textContent = 'Food Place';
+restaurantName.textContent = restaurant.showName();
 
 // add tabs
 const tabs = add('div', 'tabs', 'main-tabs', header);
