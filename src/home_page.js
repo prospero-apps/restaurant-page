@@ -16,13 +16,13 @@ function load_home_page() {
     line1.textContent = 'Hungry? What are you waiting for?'
 
     const line2 = add('p', 'line', 'line2', rectangle);
-    line2.textContent = `We are a ${restaurant.description}.`;
+    line2.textContent = `We are a ${restaurant.showDescription()}.`;
 
     const line3 = add('p', 'line', 'line3', rectangle);
     line3.textContent = 'Come, eat and drink. Tasty like never before.'
 
     const line4 = add('p', 'line', 'line4', rectangle);
-    line4.textContent = restaurant.address;
+    line4.textContent = restaurant.showAddress();
 }
 
 export default load_home_page;

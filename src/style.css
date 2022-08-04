@@ -5,6 +5,7 @@
 
 :root {
     --transparent-black: rgba(.5, .5, .5, .5);
+    --transparent-white: rgba(255, 255, 255, .5);
 }
 
 body {
@@ -94,7 +95,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     gap: 1em;
-    padding: 1em;;
+    padding: 1em;
 }
 
 .menu-element {
@@ -136,4 +137,75 @@ body {
 }
 
 /* CONTACT */
+#contact-container {
+    display: grid;
+    grid-template-columns: 1fr .75fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+    background-color: var(--transparent-white);
+    color: black;
+    font-size: 1.2em;
+}
 
+.field {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#contact-call {
+    grid-column: 1 / 3;
+    font-size: 2em;
+    font-weight: bold;
+    justify-self: center;
+}
+
+#contact-form {
+    grid-row: 2 / 5;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;    
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#contact-form * {
+    padding: 5px;
+}
+
+.area {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#message-line {
+    display: flex;
+    align-items: center;
+}
+
+#message-area {
+    flex: 2;
+}
+
+#message-input {
+    height: 100%;
+}
+
+#submit-button {
+    font-size: 1.2em;
+    border-radius: 10px;
+    background-color: bisque;
+    display: grid;
+}
+
+#submit-button:hover,
+#submit-button:active {
+    background-color: rgb(233, 203, 173);
+}
