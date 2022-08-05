@@ -10,7 +10,7 @@ import PhoneIcon from './icons/phone.png';
 import HoursIcon from './icons/time.png';
 
 function load_contact_page() {
-    load_header();
+    // load_header();
 
     /* CONTAINER */
     const container = add('div', 'container', 'contact-container', content);
@@ -47,13 +47,15 @@ function load_contact_page() {
     nameInputLabel.htmlFor = 'nameInput';
     nameInputLabel.textContent = 'Name';    
     const nameInput = add('input', 'inp', 'name-input', nameArea);
+    nameInput.type = 'text';
 
     const emailArea = add('div', 'area', 'email-area', contactForm);
     const emailInputLabel = add('label', 'lbl', 'email-label', emailArea);
     emailInputLabel.htmlFor = 'emailInput';
     emailInputLabel.textContent = 'Email';
     const emailInput = add('input', 'inp', 'email-input', emailArea);
-    
+    emailInput.type = 'email';
+
     const messageArea = add('div', 'area', 'message-area', contactForm);
     const messageLine = add('div', 'line', 'message-line', messageArea);
     const messageIcon = add('img', 'icon', 'message-icon', messageLine);
@@ -65,6 +67,8 @@ function load_contact_page() {
 
     const contactButton = add('button', 'area', 'submit-button', contactForm);
     contactButton.textContent = 'Send';
+
+    return container;
 }
 
 export default load_contact_page;

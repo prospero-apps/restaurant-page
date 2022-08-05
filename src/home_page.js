@@ -4,11 +4,14 @@ import {restaurant} from './restaurant';
 import load_header from './header';
 
 function load_home_page() {
-    load_header();
+    // load_header();
 
     /* CONTAINER */
-    const container = add('div', 'container', 'home-container', content);
+    // const container = add('div', 'container', 'home-container', content);
     
+    const container = document.createElement('div');
+    container.id = 'home-container';
+
     // add semitransparent rectangle with text
     const rectangle = add('div', 'rect', 'info', container);
 
@@ -23,6 +26,8 @@ function load_home_page() {
 
     const line4 = add('p', 'line', 'line4', rectangle);
     line4.textContent = restaurant.showAddress();
+
+    return container;
 }
 
 export default load_home_page;

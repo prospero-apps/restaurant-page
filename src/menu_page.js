@@ -100,7 +100,7 @@ function createMenu() {
 }
 
 function load_menu_page() {
-    load_header();
+    // load_header();
 
     /* CONTAINER */
     const container = add('div', 'container', 'menu-container', content);
@@ -108,6 +108,8 @@ function load_menu_page() {
     for(let i = 0; i < menuItems.length; i++) {
         container.appendChild(createMenuItem(menuItems[i]));
     }
+
+    return container;
 }
 
 export default load_menu_page;

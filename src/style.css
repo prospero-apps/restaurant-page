@@ -51,7 +51,7 @@ body {
 
 .tab:hover,
 .tab:active {
-    color: yellow;
+    color: bisque;
 }
 
 /* HOME */
@@ -177,6 +177,13 @@ body {
 
 #contact-form * {
     padding: 5px;
+}
+
+#contact-form input[type=text],
+#contact-form input[type=email],
+#contact-form textarea {
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .area {
